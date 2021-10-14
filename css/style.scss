@@ -12,7 +12,11 @@ $LightYellow1-hex: #ffd432;
 $LightGrey1-hex: #ffffff;
 $LightGrey2-hex: #919191;
 
-$gradientBackground: linear-gradient(190deg, $LightBlue2-hex 0%, $LightBlue3-hex 100%);
+$gradientBackground: linear-gradient(
+  190deg,
+  $LightBlue2-hex 0%,
+  $LightBlue3-hex 100%
+);
 @font-face {
   font-family: lemon-milk;
   src: url("../font/LEMONMILK-Bold.otf");
@@ -41,12 +45,13 @@ $Pacifico: pacifico;
 
 body {
   font-family: $Roboto;
-  color: $LightGrey1-hex;
-//   cursor: none;
+  //   color: $LightGrey1-hex; //reorganizing layout
+  color: $LightBlue3-hex;
+  //   cursor: none;
 }
 div.content {
-  width: 100vw;
-  height: 100vh;
+  //   width: 100vw; //reorganizing layout
+  //   height: 100vh; //reorganizing layout
   background-color: $LightBlue2-hex;
   background-image: $gradientBackground;
   overflow: hidden;
@@ -67,6 +72,7 @@ div.content {
       justify-content: space-between;
       list-style: none;
       li {
+        color: $LightGrey1-hex;
         padding: 1rem;
         font-family: $Nasa;
         text-transform: uppercase;
@@ -74,20 +80,19 @@ div.content {
         top: 0;
         left: 0;
         transition: all 0.5s ease;
-        transition-property: color; 
+        transition-property: color;
       }
       li:before {
-          position: absolute;
-          bottom: 0.70rem;
-          content: "";
-          width: 0;
-          height: 0.11rem;
-          background-color: $LightGrey1-hex;
+        position: absolute;
+        bottom: 0.7rem;
+        content: "";
+        width: 0;
+        height: 0.11rem;
+        background-color: $LightGrey1-hex;
         //   background-color: $LightBlue1-hex;
-          opacity: 0;
-          transition: all 1s ease;
-          transition-property: width, opacity; 
-           
+        opacity: 0;
+        transition: all 1s ease;
+        transition-property: width, opacity;
       }
       li:hover:before {
         width: 50px;
@@ -99,14 +104,13 @@ div.content {
       flex: 1; //sets both as equal halves within flex parent
     }
   }
-
 }
 
 section div.front-cover {
-    // background-color: $LightBlue1-hex;
-    width: 100%;
-    height: 100%;
-  }
+  // background-color: $LightBlue1-hex;
+  // width: 100%; //reorganizing layout
+  // height: 100%; //reorganizing layout
+}
 div.cursor {
   background-color: #919191;
   width: 2rem;
@@ -118,22 +122,22 @@ div.cursor {
   transform: translate(-50%, -50%); //to fix cursor center position
 
   // note that we are now unable to select links because of the cursor div and the fact that its is constantly moving
+  cursor: grow;
   pointer-events: none;
   transition: all 0.3s ease;
   //   transition-property: background-color, transform, border;
   transition-property: background-color, width, height;
   //   to solve the problem of the cursor not fitting over the link we need to work with transform origin
   transform-origin: 100% 100%;
-//   z-index: -1;//if I wasnt using transparent cursor
-
+  //   z-index: -1;//if I wasnt using transparent cursor
 }
 
 section > div.front-cover > img {
-  width: auto;
-  height: 90vh;
-//   position: relative;
+  width: 50%;
+  height: auto;
+  //   position: relative;
   z-index: 1;
-//   top: 100px;
+  //   top: 100px;
 }
 div.link-grow {
   // div.cursor.link-grow {
@@ -143,10 +147,15 @@ div.link-grow {
   background-color: transparent;
   // border: 0.125rem solid $LightYellow1-hex;
   //   opacity: 0.4;
-  
-//   z-index: -1;
+
+  //   z-index: -1;
 }
 .hovered-link {
   color: $LightYellow1-hex;
-//   font-family: $Pirulen !important; 
+  cursor: pointer;
+  //   font-family: $Pirulen !important;
+}
+
+.jumbotron {
+  position: absolute;
 }
