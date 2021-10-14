@@ -34,9 +34,10 @@ body {
 }
 
 div.content {
+  width: 100vw;
+  height: 100vh;
   background-color: #3a1adb;
   background-image: linear-gradient(190deg, #3a1adb 0%, #110066 100%);
-  overflow: hidden;
 }
 
 div.content nav {
@@ -103,13 +104,6 @@ div.content nav ul.nav-links li:hover:before {
   opacity: 1;
 }
 
-div.content nav h1,
-div.content nav ul.nav-links {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
 div.cursor {
   background-color: #919191;
   width: 2rem;
@@ -130,12 +124,6 @@ div.cursor {
           transform-origin: 100% 100%;
 }
 
-section > div.front-cover > img {
-  width: 50%;
-  height: auto;
-  z-index: 1;
-}
-
 div.link-grow {
   width: 6rem;
   height: 6rem;
@@ -147,7 +135,73 @@ div.link-grow {
   cursor: pointer;
 }
 
-.jumbotron {
+section.sect {
+  height: 100vh;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border-top: 1px solid #ffd432;
+  background-color: #3a1adb;
+  background-image: linear-gradient(190deg, #3a1adb 0%, #110066 100%);
+}
+
+section.sect div.front-cover {
+  padding: 3rem;
+}
+
+section.sect div.front-cover h2 {
+  font-size: 5rem;
+}
+
+section.sect img {
+  width: 40%;
+  height: auto;
+  margin: 3rem;
+  display: block;
+  background-color: #ffd432;
+  padding-bottom: 0.2rem;
+}
+
+h1.jumbotron {
+  color: #90cbfb;
+  font-family: pirulen;
   position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(2);
+          transform: translate(-50%, -50%) scale(2);
+  text-align: center;
+}
+
+#img1 {
+  border-left: 1rem solid #919191;
+  padding-left: 3rem;
+}
+
+#img2 {
+  border-right: 1rem solid #919191;
+  padding-right: 3rem;
+}
+
+hr {
+  border: 1px solid #ffd432;
+}
+
+hr#l-hr {
+  border: 0.1rem solid #ffd432;
+  border-bottom: none;
+  display: block;
+  margin-top: 0.3rem;
+}
+
+div.front-cover p {
+  line-height: 1.5rem;
+  margin-top: 1rem;
 }
 /*# sourceMappingURL=style.css.map */

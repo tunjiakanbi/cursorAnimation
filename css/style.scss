@@ -48,13 +48,17 @@ body {
   //   color: $LightGrey1-hex; //reorganizing layout
   color: $LightBlue3-hex;
   //   cursor: none;
+  //   background-color: $LightBlue2-hex;
+  //   background-image: $gradientBackground;
+  //   background-attachment: fixed;
+  //   height: 100%;
 }
 div.content {
-  //   width: 100vw; //reorganizing layout
-  //   height: 100vh; //reorganizing layout
+  width: 100vw; //reorganizing layout
+  height: 100vh; //reorganizing layout
   background-color: $LightBlue2-hex;
   background-image: $gradientBackground;
-  overflow: hidden;
+  //   overflow: hidden;
   nav {
     display: flex;
     justify-content: space-between;
@@ -99,18 +103,18 @@ div.content {
         opacity: 1;
       }
     }
-    h1,
-    ul.nav-links {
-      flex: 1; //sets both as equal halves within flex parent
-    }
+    // h1,
+    // ul.nav-links {
+    //   flex: 1; //sets both as equal halves within flex parent
+    // } //reorganizing layout
   }
 }
 
-section div.front-cover {
-  // background-color: $LightBlue1-hex;
-  // width: 100%; //reorganizing layout
-  // height: 100%; //reorganizing layout
-}
+//section div.front-cover {
+// background-color: $LightBlue1-hex;
+// width: 100%; //reorganizing layout
+// height: 100%; //reorganizing layout
+//}
 div.cursor {
   background-color: #919191;
   width: 2rem;
@@ -132,13 +136,6 @@ div.cursor {
   //   z-index: -1;//if I wasnt using transparent cursor
 }
 
-section > div.front-cover > img {
-  width: 50%;
-  height: auto;
-  //   position: relative;
-  z-index: 1;
-  //   top: 100px;
-}
 div.link-grow {
   // div.cursor.link-grow {
   width: 6rem;
@@ -153,9 +150,67 @@ div.link-grow {
 .hovered-link {
   color: $LightYellow1-hex;
   cursor: pointer;
-  //   font-family: $Pirulen !important;
 }
 
-.jumbotron {
+section.sect {
+  height: 100vh;
+  color: $LightGrey1-hex;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-top: 1px solid $LightYellow1-hex;
+  background-color: $LightBlue2-hex;
+  background-image: $gradientBackground;
+  div.front-cover {
+    //    height: 100%;
+    padding: 3rem;
+
+    h2 {
+      font-size: 5rem;
+    }
+  }
+  img {
+    width: 40%;
+    height: auto;
+    // padding: 3rem;
+    margin: 3rem;
+    display: block;
+    background-color: $LightYellow1-hex;
+    padding-bottom: 0.2rem;
+  }
+}
+
+h1.jumbotron {
+  color: $LightBlue1-hex;
+  font-family: $Pirulen;
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(2);
+  text-align: center;
+}
+
+#img1 {
+    border-left: 1rem solid $LightGrey2-hex;  
+    padding-left: 3rem;
+    
+}
+#img2 {
+    border-right: 1rem solid $LightGrey2-hex; 
+    padding-right: 3rem; 
+}
+hr {
+    border: 1px solid $LightYellow1-hex;
+    
+}
+hr#l-hr {
+    border: 0.1rem solid $LightYellow1-hex;
+    border-bottom: none;
+    display: block;
+    margin-top: 0.3rem;
+}
+
+div.front-cover p {
+    line-height: 1.5rem;
+    margin-top: 1rem;
 }
