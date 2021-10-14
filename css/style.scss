@@ -1,67 +1,154 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: 0;
-    font-size: 16px;
+  padding: 0;
+  margin: 0;
+  box-sizing: 0;
+  font-size: 16px;
 }
 /* Color Theme Swatches in Hex */
-
-$LightBlue1-hex: #90CBFB;
+$LightBlue1-hex: #90cbfb;
 $LightBlue2-hex: #3a1adb;
 $LightBlue3-hex: #110066;
-$LightYellow1-hex: #FFD432;
-$LightGrey1-hex: #FFFFFF;
+$LightYellow1-hex: #ffd432;
+$LightGrey1-hex: #ffffff;
 $LightGrey2-hex: #919191;
 
-$gradientBackground: linear-gradient(190deg, $LightBlue2-hex 0%, $LightBlue3-hex 100%);
+$gradientBackground: linear-gradient(
+  190deg,
+  $LightBlue2-hex 0%,
+  $LightBlue3-hex 100%
+);
 @font-face {
-    font-family: lemon-milk;
-    src: url('../font/LEMONMILK-Bold.otf');
+  font-family: lemon-milk;
+  src: url("../font/LEMONMILK-Bold.otf");
 }
 @font-face {
-    font-family: nasalization;
-    src: url('../font/nasalization-rg.otf');
+  font-family: nasalization;
+  src: url("../font/nasalization-rg.otf");
 }
 @font-face {
-    font-family: pacifico;
-    src: url('../font/Pacifico-Regular.ttf');
+  font-family: pacifico;
+  src: url("../font/Pacifico-Regular.ttf");
 }
 @font-face {
-    font-family: pirulen;
-    src: url('../font/pirulen\ rg.ttf');
+  font-family: pirulen;
+  src: url("../font/pirulen\ rg.ttf");
 }
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Rubik:wght@800&family=Spartan&display=swap');
-$Roboto: 'Roboto', sans-serif;
-$Rubik: 'Rubik', sans-serif;
-$Spartan: 'Spartan', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Rubik:wght@800&family=Spartan&display=swap");
+$Roboto: "Roboto", sans-serif;
+$Rubik: "Rubik", sans-serif;
+$Spartan: "Spartan", sans-serif;
 
 $Pirulen: pirulen;
 $LemonMilk: lemon-milk;
 $Nasa: nasalization;
 $Pacifico: pacifico;
 
-// background-color: #FFFFFF;
-// background-image: linear-gradient(180deg, #FFFFFF 0%, #6284FF 50%, #FF0000 100%);
-// background-color: #FFFFFF;
-// background-image: linear-gradient(180deg, #FFFFFF 0%, #6284FF 50%, #FF0000 100%);
 body {
-    font-family: $Roboto;
-    color: $LightGrey1-hex;
+  font-family: $Roboto;
+  color: $LightGrey1-hex;
+//   cursor: none;
 }
 div.content {
-    width: 100vw;
-    height: 100vh;
-    background-color: $LightBlue2-hex;
-    background-image: $gradientBackground;
-    nav {
-        display: flex;
-        h1 {
-            color:$LightGrey1-hex;
-            font-family: $Pirulen;
-            font-size: 2rem;
-        }
+  width: 100vw;
+  height: 100vh;
+  background-color: $LightBlue2-hex;
+  background-image: $gradientBackground;
+  overflow: hidden;
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 10vh;
+    margin: auto;
+    width: 90%;
+    h1 {
+      color: $LightGrey1-hex;
+      font-family: $Pirulen;
+      font-size: 2rem;
     }
-    section.front-cover {
+    ul.nav-links {
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+      li {
+        padding: 1rem;
+        font-family: $Nasa;
+        text-transform: uppercase;
+        position: relative;
+        top: 0;
+        left: 0;
+        transition: all 0.5s ease;
+        transition-property: color; 
+      }
+      li:before {
+          position: absolute;
+          bottom: 0.70rem;
+          content: "";
+          width: 0;
+          height: 0.11rem;
+          background-color: $LightGrey1-hex;
+        //   background-color: $LightBlue1-hex;
+          opacity: 0;
+          transition: all 1s ease;
+          transition-property: width, opacity; 
+           
+      }
+      li:hover:before {
+        width: 50px;
+        opacity: 1;
+      }
+    }
+    h1,
+    ul.nav-links {
+      flex: 1; //sets both as equal halves within flex parent
+    }
+  }
 
-    }
+  section div.front-cover {
+    // background-color: $LightBlue1-hex;
+    width: 100%;
+  }
+}
+div.cursor {
+  background-color: #919191;
+  width: 2rem;
+  height: 2rem;
+  border: 0.125rem solid $LightYellow1-hex;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  transform: translate(-50%, -50%); //to fix cursor center position
+
+  // note that we are now unable to select links because of the cursor div and the fact that its is constantly moving
+  pointer-events: none;
+  transition: all 0.3s ease;
+  //   transition-property: background-color, transform, border;
+  transition-property: background-color, width, height;
+  //   to solve the problem of the cursor not fitting over the link we need to work with transform origin
+  transform-origin: 100% 100%;
+//   z-index: -1;//if I wasnt using transparent cursor
+
+}
+
+section > div.front-cover > img {
+  width: 100%;
+  height: auto;
+  position: relative;
+//   z-index: 2;
+  top: 100px;
+}
+div.link-grow {
+  // div.cursor.link-grow {
+  width: 6rem;
+  height: 6rem;
+  //   transform: scale(2);
+  background-color: transparent;
+  // border: 0.125rem solid $LightYellow1-hex;
+  //   opacity: 0.4;
+  backdrop-filter: grayscale();
+  z-index: -1;
+}
+.hovered-link {
+  color: $LightYellow1-hex;
+//   font-family: $Pirulen !important; 
 }
