@@ -66,7 +66,8 @@ div.content {
     min-height: 10vh;
     margin: auto;
     width: 90%;
-    h1 {
+    border-bottom: 1px solid $LightBlue1-hex;
+    h1.logo {
       color: $LightGrey1-hex;
       font-family: $Pirulen;
       font-size: 2rem;
@@ -188,6 +189,17 @@ h1.jumbotron {
   left: 50%;
   transform: translate(-50%, -50%) scale(2);
   text-align: center;
+  background-color: $LightBlue3-hex;
+  padding: 1.75rem;
+  border-radius: 1rem;
+  border: 0.0125rem solid $LightGrey1-hex;
+  box-shadow: -0.25rem 0.25rem 0.5rem  $LightBlue3-hex;
+  span {
+    color: $LightGrey1-hex;
+  }
+}
+h1.jumbotron:hover {
+    box-shadow: -0.25rem 0.25rem 0.5rem $LightBlue2-hex;
 }
 
 #img1 {
@@ -222,4 +234,5 @@ Some notes for the future,
 2. add a preloader before page loads  
 3. add a modal when images are clicked, 
 4. and include cursor animation for the images and landing hr 
+5. make use of negative space with additional lines (vertical and horizontal, also text) and basic shapes
 */

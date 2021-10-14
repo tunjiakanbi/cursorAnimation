@@ -53,9 +53,10 @@ div.content nav {
   min-height: 10vh;
   margin: auto;
   width: 90%;
+  border-bottom: 1px solid #90cbfb;
 }
 
-div.content nav h1 {
+div.content nav h1.logo {
   color: #ffffff;
   font-family: pirulen;
   font-size: 2rem;
@@ -177,6 +178,21 @@ h1.jumbotron {
   -webkit-transform: translate(-50%, -50%) scale(2);
           transform: translate(-50%, -50%) scale(2);
   text-align: center;
+  background-color: #110066;
+  padding: 1.75rem;
+  border-radius: 1rem;
+  border: 0.0125rem solid #ffffff;
+  -webkit-box-shadow: -0.25rem 0.25rem 0.5rem #110066;
+          box-shadow: -0.25rem 0.25rem 0.5rem #110066;
+}
+
+h1.jumbotron span {
+  color: #ffffff;
+}
+
+h1.jumbotron:hover {
+  -webkit-box-shadow: -0.25rem 0.25rem 0.5rem #3a1adb;
+          box-shadow: -0.25rem 0.25rem 0.5rem #3a1adb;
 }
 
 #img1 {
@@ -211,5 +227,6 @@ Some notes for the future,
 2. add a preloader before page loads  
 3. add a modal when images are clicked, 
 4. and include cursor animation for the images and landing hr 
+5. make use of negative space with additional lines (vertical and horizontal, also text) and basic shapes
 */
 /*# sourceMappingURL=style.css.map */
