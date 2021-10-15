@@ -221,7 +221,10 @@ hr#l-hr {
     display: block;
     margin-top: 0.3rem;
 }
-
+div.front-cover h2 span {
+    color: $LightYellow1-hex;
+    font-size: inherit;
+}
 div.front-cover p {
     line-height: 1.5rem;
     margin-top: 1rem;
