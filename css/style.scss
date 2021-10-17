@@ -60,19 +60,23 @@ div.content {
   background-image: $gradientBackground;
   //   overflow: hidden;
   nav {
+    position: sticky;
+    top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     min-height: 10vh;
     margin: auto;
-    width: 90%;
+    width: 100%;
     border-bottom: 1px solid $LightBlue1-hex;
     h1.logo {
       color: $LightGrey1-hex;
       font-family: $Pirulen;
       font-size: 2rem;
+      margin-left: 1rem;
     }
     ul.nav-links {
+        margin-right: 1rem;
       display: flex;
       justify-content: space-between;
       list-style: none;
@@ -239,3 +243,5 @@ Some notes for the future,
 4. and include cursor animation for the images and landing hr 
 5. make use of negative space with additional lines (vertical and horizontal, also text) and basic shapes
 */
+
+

@@ -74,10 +74,13 @@ $(document).ready(function () {
 //     },
 // });
 //moved all timeline here for easier manipulation
-tl1.fromTo('.logo', {y: 0},{y:-100});
+// tl1.fromTo('.logo', {y: 0},{y:-100});
+
+
 // tl2.to('.jumbotron', {opacity: 0})
 // tl2.fromTo('.jumbotron', {scale: 2.5}, {scale: 1.5, top: '4rem', left: '3rem', x:'50%', y:'50%', opacity:0});
-tl2.fromTo('.jumbotron', {scale: 2.5}, {scale: 1.5, top: '150px', left: '150px', x:'50%', y:'50%'})
+tl2.fromTo('.jumbotron', {scale: 2.5}, {scale: 1.5})
+// tl2.fromTo('.jumbotron', {scale: 2.5}, {scale: 1.5, top: '150px', left: '150px', x:'50%', y:'50%'})
 tl2.to('h1.jumbotron',{backgroundColor: 'transparent'})
 tl2.to('h1.jumbotron', {opacity: 0},'+2s');
 // tl3.to('.jumbotron', {opacity: 1},{opacity: 0});

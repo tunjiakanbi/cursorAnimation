@@ -41,6 +41,9 @@ div.content {
 }
 
 div.content nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -52,7 +55,7 @@ div.content nav {
           align-items: center;
   min-height: 10vh;
   margin: auto;
-  width: 90%;
+  width: 100%;
   border-bottom: 1px solid #90cbfb;
 }
 
@@ -60,9 +63,11 @@ div.content nav h1.logo {
   color: #ffffff;
   font-family: pirulen;
   font-size: 2rem;
+  margin-left: 1rem;
 }
 
 div.content nav ul.nav-links {
+  margin-right: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
