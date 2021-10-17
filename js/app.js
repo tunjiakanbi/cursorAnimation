@@ -46,14 +46,18 @@ $(document).ready(function () {
 // tl1.to('.jumbotron', {opacity: 0});
   let tl2 = gsap.timeline({
     scrollTrigger: {
-        trigger: '.content',
-        start: '0%',
-        end: '468px',
-        scrub: 1,
+        trigger: 'h1.jumbotron',
+        start: '0% 20%',
+        end: '120% 40%',
+        // start: '60% center',
+        // end: 'bottom 40%',
+        // start: '0%',
+        // end: 468,
+        scrub: 4,
         // scrub: true,
-        pin: true,
-        pinSpacing: true,
-        markers: {startColor: "green", endColor: "red", fontSize: "12px"},
+        // pin: true,
+        // pinSpacing: true,
+        markers: {startColor: "aqua", endColor: "red", fontSize: "18px"},
         marker:true,
         //allows the next page to start, rather than have a blank and empty page
     },
