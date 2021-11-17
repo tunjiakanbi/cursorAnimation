@@ -131,7 +131,7 @@ div.cursor {
   transform: translate(-50%, -50%); //to fix cursor center position
 
   // note that we are now unable to select links because of the cursor div and the fact that its is constantly moving
-  cursor: grow;
+  // cursor: grow;
   pointer-events: none;
   transition: all 0.3s ease;
   //   transition-property: background-color, transform, border;
@@ -145,7 +145,7 @@ div.link-grow {
   // div.cursor.link-grow {
   width: 6rem;
   height: 6rem;
-  //   transform: scale(2);
+    // transform: scale(2);
   background-color: transparent;
   // border: 0.125rem solid $LightYellow1-hex;
   //   opacity: 0.4;
